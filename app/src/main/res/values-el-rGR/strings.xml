@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Regeneration 2021___</string>
+    <string name="app_name">Regeneration__2021</string>
+    <string name="main_hello_world">Καλημέρα Κόσμε!</string>
+
+    <string name="login_linear_title">Login to your account</string>
+    <string name="login_linear_forgot">Forgot your password?</string>
+    <string name="login_linear_btn">Login</string>
+    <string name="login_linear_edit_username">Email Address</string>
+    <string name="login_linear_edit_password">Password</string>
 </resources>

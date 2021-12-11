@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/default_padding"
+    android:paddingRight="@dimen/default_padding">
+
+    <ImageView
+        android:id="@+id/login_linear_back_btn"
+        android:layout_width="@dimen/minimum_size"
+        android:layout_height="@dimen/minimum_size"
+        android:layout_gravity="left"
+        android:padding="12dp"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:tint="#b8c0ce" />
+
+    <TextView
+        android:id="@+id/login_linear_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/login_linear_title"
+        android:textColor="#363c43"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_linear_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/login_linear_edit_username"
+        app:boxBackgroundColor="#edf1f5"
+        app:boxCornerRadiusBottomEnd="4dp"
+        app:boxCornerRadiusBottomStart="4dp"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_linear_username_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_linear_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/login_linear_edit_password"
+        app:boxBackgroundColor="#edf1f5"
+        app:boxCornerRadiusBottomEnd="4dp"
+        app:boxCornerRadiusBottomStart="4dp"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#c3ced8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_linear_password_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_linear_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/login_linear_btn"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/red"
+        app:cornerRadius="4dp" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/login_linear_forgot"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="4dp"-->
+    <!--        android:background="?attr/selectableItemBackground"-->
+    <!--        android:paddingLeft="16dp"-->
+    <!--        android:paddingTop="4dp"-->
+    <!--        android:paddingBottom="4dp"-->
+    <!--        android:paddingRight="16dp"-->
+    <!--        android:text="@string/login_linear_forgot"-->
+    <!--        android:textColor="@color/red" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_linear_forgot"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/login_linear_forgot"
+        android:textAllCaps="false"
+        android:textColor="@color/red" />
+</LinearLayout>
