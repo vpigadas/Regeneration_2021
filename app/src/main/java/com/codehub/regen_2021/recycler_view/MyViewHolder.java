@@ -19,11 +19,12 @@ public class MyViewHolder extends BaseViewHolder {
     public void bind(String data) {
         TextView textView = itemView.findViewById(R.id.holder_list_txt);
         textView.setText(data);
+        itemView.getContext().getString(R.string.app_name);
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v,data);
+                listener.onClick(v, data);
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.codehub.regen_2021.recycler_view;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,23 +25,21 @@ public class MyAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     }
 
     private List<String> arrayData;
-    private Context context;
     private OnItemClickListener listener;
 
-    public MyAdapter(List<String> arrayData, Context context, OnItemClickListener listener) {
+    public MyAdapter(List<String> arrayData, OnItemClickListener listener) {
         this.arrayData = arrayData;
-        this.context = context;
         this.listener = listener;
     }
 
     @NonNull
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        if (viewType == 1) {
-            View view = LayoutInflater.from(context).inflate(R.layout.holder_list_item_2, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
+        Log.d("TAG", "oncreate viewType"+ viewType);
+        if (viewType == R.layout.holder_list_item_2) {
             return new MyViewHolder2(view, listener);
         } else {
-            View view = LayoutInflater.from(context).inflate(R.layout.holder_list_item, parent, false);
             return new MyViewHolder(view, listener);
         }
     }
@@ -49,6 +48,8 @@ public class MyAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         String data = arrayData.get(position);
         holder.bind(data);
+        Log.d("TAG", "onBind position"+ position);
+
     }
 
     @Override
@@ -59,9 +60,9 @@ public class MyAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     @Override
     public int getItemViewType(int position) {
         if (position % 2 == 0) {
-            return 1;
+            return R.layout.holder_list_item_2;
         } else {
-            return 0;
+            return R.layout.holder_list_item;
         }
     }
 }

@@ -30,7 +30,7 @@ public class RecyclerActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-        recyclerView.setAdapter(new MyAdapter(getDataList(), this, new MyAdapter.OnItemClickListener() {
+        recyclerView.setAdapter(new MyAdapter(getDataList(), new MyAdapter.OnItemClickListener() {
             @Override
             public void onClick(View v, String data) {
 

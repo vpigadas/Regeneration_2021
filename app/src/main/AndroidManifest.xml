@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codehub.regen_2021">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Regeneration2021">
         <activity
-            android:name=".recycler_view.RecyclerActivity"
+            android:name=".network.NetWorkActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +21,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".fragments.MyFragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recycler_view.RecyclerActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
