@@ -43,8 +43,8 @@ public class BlankFragment extends Fragment {
 
         if (getArguments() != null) {
             String name = getArguments().getString("name");
-            textView.setText(name);
-            getString(R.string.app_name);
+            textView.setText(getString(R.string.demo_with_arg, name,0));
+
         }
 
     }

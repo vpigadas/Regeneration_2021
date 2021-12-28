@@ -8,4 +8,5 @@
     <string name="login_linear_btn">Login</string>
     <string name="login_linear_edit_username">Email Address</string>
     <string name="login_linear_edit_password">Password</string>
+    <string name="demo_with_arg">Το όνομα μου ειναι %1$s %2$d</string>
 </resources>

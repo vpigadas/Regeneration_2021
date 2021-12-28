@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Regeneration2021">
         <activity
-            android:name=".storage.StorageActivity"
-            android:exported="true" >
+            android:name=".viewmodels.ViewModelActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,15 +21,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".burger_menu.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Regeneration2021.NoActionBar"></activity>
+        <activity
+            android:name=".pages.FragmentPagesActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".storage.StorageActivity"
+            android:exported="true" />
+        <activity
             android:name=".network.NetWorkActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragments.MyFragmentActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".fragments.MyFragmentActivity"
-            android:exported="false" />
-        <activity
             android:name=".recycler_view.RecyclerActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
